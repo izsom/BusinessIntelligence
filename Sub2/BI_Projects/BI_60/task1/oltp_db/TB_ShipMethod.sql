@@ -5,5 +5,4 @@ CREATE TABLE TB_ShipMethod (
     ShipBase DECIMAL(13,4) NOT NULL,
     ShipRate DECIMAL(13,4) NOT NULL
 );
-
 ALTER TABLE TB_ShipMethod ADD CONSTRAINT PK_ShipMethod PRIMARY KEY (ShipMethodID);

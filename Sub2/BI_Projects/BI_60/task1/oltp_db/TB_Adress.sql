@@ -1,8 +1,9 @@
 CREATE TABLE TB_Address (
-    AddressID INT PRIMARY KEY NOT NULL,
+    AddressID INT NOT NULL,
     CountryID INT,
-    FOREIGN KEY (CountryID) REFERENCES TB_Country(CountryID),
     AddressLine VARCHAR(60) NOT NULL,
     City VARCHAR(30) NOT NULL,
     PostalCode VARCHAR(15) NOT NULL
 );
+ALTER TABLE TB_Address ADD CONSTRAINT FK_Country_Address FOREIGN KEY (CountryID) REFERENCES TB_Country(CountryID);
+ALTER TABLE TB_Address ADD CONSTRAINT PK_Address PRIMARY KEY (AddressID);

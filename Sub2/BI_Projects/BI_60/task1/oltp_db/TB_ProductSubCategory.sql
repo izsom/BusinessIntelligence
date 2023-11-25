@@ -1,7 +1,8 @@
 -- Create TB_ProductSubCategory Table
 CREATE TABLE TB_ProductSubCategory (
-    ProductSubCategoryID INT PRIMARY KEY NOT NULL,
+    ProductSubCategoryID INT NOT NULL,
     ProductTopCategoryID INT,
     Name VARCHAR(50) NOT NULL,
-    FOREIGN KEY (ProductTopCategoryID) REFERENCES TB_ProductTopCategory(ProductTopCategoryID)
 );
+ALTER TABLE TB_ProductSubCategory ADD CONSTRAINT PK_ProductSubCategory PRIMARY KEY (ProductSubCategoryID);
+ALTER TABLE TB_ProductSubCategory ADD CONSTRAINT FK_ProductTopCategory_ProductSubCategory FOREIGN KEY (ProductTopCategoryID) REFERENCES TB_ProductTopCategory(ProductTopCategoryID);

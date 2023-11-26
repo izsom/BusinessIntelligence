@@ -1,3 +1,5 @@
+DROP TABLE IF EXISTS TB_Person;
+
 -- Create TB_Person Table
 CREATE TABLE TB_Person (
     PersonID INT NOT NULL,

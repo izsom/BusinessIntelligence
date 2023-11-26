@@ -7,9 +7,80 @@
   <created_user>-</created_user>
   <created_date>2023/11/25 15:11:58.344</created_date>
   <modified_user>-</modified_user>
-  <modified_date>2023/11/25 16:06:55.203</modified_date>
+  <modified_date>2023/11/26 16:15:40.222</modified_date>
   <parameters>
     </parameters>
+  <connection>
+    <name>BI_Bikes_60</name>
+    <server>localhost</server>
+    <type>MYSQL</type>
+    <access>Native</access>
+    <database>BI_Bikes_60</database>
+    <port>3306</port>
+    <username>bi2023</username>
+    <password>Encrypted 2be98afc86aa7f2e4a910fc208cc1989b</password>
+    <servername/>
+    <data_tablespace/>
+    <index_tablespace/>
+    <attributes>
+      <attribute>
+        <code>EXTRA_OPTION_MYSQL.allowLoadLocalInfile</code>
+        <attribute>true</attribute>
+      </attribute>
+      <attribute>
+        <code>EXTRA_OPTION_MYSQL.defaultFetchSize</code>
+        <attribute>500</attribute>
+      </attribute>
+      <attribute>
+        <code>EXTRA_OPTION_MYSQL.useCursorFetch</code>
+        <attribute>true</attribute>
+      </attribute>
+      <attribute>
+        <code>FORCE_IDENTIFIERS_TO_LOWERCASE</code>
+        <attribute>N</attribute>
+      </attribute>
+      <attribute>
+        <code>FORCE_IDENTIFIERS_TO_UPPERCASE</code>
+        <attribute>N</attribute>
+      </attribute>
+      <attribute>
+        <code>IS_CLUSTERED</code>
+        <attribute>N</attribute>
+      </attribute>
+      <attribute>
+        <code>PORT_NUMBER</code>
+        <attribute>3306</attribute>
+      </attribute>
+      <attribute>
+        <code>PRESERVE_RESERVED_WORD_CASE</code>
+        <attribute>Y</attribute>
+      </attribute>
+      <attribute>
+        <code>QUOTE_ALL_FIELDS</code>
+        <attribute>N</attribute>
+      </attribute>
+      <attribute>
+        <code>SQL_CONNECT</code>
+        <attribute>SET GLOBAL local_infile = 'ON';</attribute>
+      </attribute>
+      <attribute>
+        <code>STREAM_RESULTS</code>
+        <attribute>Y</attribute>
+      </attribute>
+      <attribute>
+        <code>SUPPORTS_BOOLEAN_DATA_TYPE</code>
+        <attribute>Y</attribute>
+      </attribute>
+      <attribute>
+        <code>SUPPORTS_TIMESTAMP_DATA_TYPE</code>
+        <attribute>Y</attribute>
+      </attribute>
+      <attribute>
+        <code>USE_POOLING</code>
+        <attribute>N</attribute>
+      </attribute>
+    </attributes>
+  </connection>
   <slaveservers>
     </slaveservers>
   <job-log-table>
@@ -317,7 +388,7 @@
       <sqlfromfile>T</sqlfromfile>
       <sqlfilename>C:\Users\me\Documents\aall my actual stuff\tuw\23W_BI_ass2\23w-bi-a2-git\Sub2\BI_Projects\BI_60\task1\oltp_db\TB_Country.sql</sqlfilename>
       <sendOneStatement>F</sendOneStatement>
-      <connection/>
+      <connection>BI_Bikes_60</connection>
       <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
@@ -335,7 +406,7 @@
       <sqlfromfile>T</sqlfromfile>
       <sqlfilename>C:\Users\me\Documents\aall my actual stuff\tuw\23W_BI_ass2\23w-bi-a2-git\Sub2\BI_Projects\BI_60\task1\oltp_db\TB_Person.sql</sqlfilename>
       <sendOneStatement>F</sendOneStatement>
-      <connection/>
+      <connection>BI_Bikes_60</connection>
       <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
@@ -353,7 +424,7 @@
       <sqlfromfile>T</sqlfromfile>
       <sqlfilename>C:\Users\me\Documents\aall my actual stuff\tuw\23W_BI_ass2\23w-bi-a2-git\Sub2\BI_Projects\BI_60\task1\oltp_db\TB_Adress.sql</sqlfilename>
       <sendOneStatement>F</sendOneStatement>
-      <connection/>
+      <connection>BI_Bikes_60</connection>
       <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
@@ -371,7 +442,7 @@
       <sqlfromfile>T</sqlfromfile>
       <sqlfilename>C:\Users\me\Documents\aall my actual stuff\tuw\23W_BI_ass2\23w-bi-a2-git\Sub2\BI_Projects\BI_60\task1\oltp_db\TB_OrderStatus.sql</sqlfilename>
       <sendOneStatement>F</sendOneStatement>
-      <connection/>
+      <connection>BI_Bikes_60</connection>
       <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
@@ -389,7 +460,7 @@
       <sqlfromfile>T</sqlfromfile>
       <sqlfilename>C:\Users\me\Documents\aall my actual stuff\tuw\23W_BI_ass2\23w-bi-a2-git\Sub2\BI_Projects\BI_60\task1\oltp_db\TB_customer.sql</sqlfilename>
       <sendOneStatement>F</sendOneStatement>
-      <connection/>
+      <connection>BI_Bikes_60</connection>
       <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
@@ -407,7 +478,7 @@
       <sqlfromfile>T</sqlfromfile>
       <sqlfilename>C:\Users\me\Documents\aall my actual stuff\tuw\23W_BI_ass2\23w-bi-a2-git\Sub2\BI_Projects\BI_60\task1\oltp_db\TB_Product.sql</sqlfilename>
       <sendOneStatement>F</sendOneStatement>
-      <connection/>
+      <connection>BI_Bikes_60</connection>
       <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
@@ -425,7 +496,7 @@
       <sqlfromfile>T</sqlfromfile>
       <sqlfilename>C:\Users\me\Documents\aall my actual stuff\tuw\23W_BI_ass2\23w-bi-a2-git\Sub2\BI_Projects\BI_60\task1\oltp_db\TB_ProductModel.sql</sqlfilename>
       <sendOneStatement>F</sendOneStatement>
-      <connection/>
+      <connection>BI_Bikes_60</connection>
       <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
@@ -443,7 +514,7 @@
       <sqlfromfile>T</sqlfromfile>
       <sqlfilename>C:\Users\me\Documents\aall my actual stuff\tuw\23W_BI_ass2\23w-bi-a2-git\Sub2\BI_Projects\BI_60\task1\oltp_db\TB_ProductSubCategory.sql</sqlfilename>
       <sendOneStatement>F</sendOneStatement>
-      <connection/>
+      <connection>BI_Bikes_60</connection>
       <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
@@ -461,7 +532,7 @@
       <sqlfromfile>T</sqlfromfile>
       <sqlfilename>C:\Users\me\Documents\aall my actual stuff\tuw\23W_BI_ass2\23w-bi-a2-git\Sub2\BI_Projects\BI_60\task1\oltp_db\TB_ProductTopCategory.sql</sqlfilename>
       <sendOneStatement>F</sendOneStatement>
-      <connection/>
+      <connection>BI_Bikes_60</connection>
       <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
@@ -479,7 +550,7 @@
       <sqlfromfile>T</sqlfromfile>
       <sqlfilename>C:\Users\me\Documents\aall my actual stuff\tuw\23W_BI_ass2\23w-bi-a2-git\Sub2\BI_Projects\BI_60\task1\oltp_db\TB_SalesOrderDetail.sql</sqlfilename>
       <sendOneStatement>F</sendOneStatement>
-      <connection/>
+      <connection>BI_Bikes_60</connection>
       <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
@@ -497,7 +568,7 @@
       <sqlfromfile>T</sqlfromfile>
       <sqlfilename>C:\Users\me\Documents\aall my actual stuff\tuw\23W_BI_ass2\23w-bi-a2-git\Sub2\BI_Projects\BI_60\task1\oltp_db\TB_ShipMethod.sql</sqlfilename>
       <sendOneStatement>F</sendOneStatement>
-      <connection/>
+      <connection>BI_Bikes_60</connection>
       <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
@@ -515,7 +586,7 @@
       <sqlfromfile>T</sqlfromfile>
       <sqlfilename>C:\Users\me\Documents\aall my actual stuff\tuw\23W_BI_ass2\23w-bi-a2-git\Sub2\BI_Projects\BI_60\task1\oltp_db\TB_SalesOrderHeader.sql</sqlfilename>
       <sendOneStatement>F</sendOneStatement>
-      <connection/>
+      <connection>BI_Bikes_60</connection>
       <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>

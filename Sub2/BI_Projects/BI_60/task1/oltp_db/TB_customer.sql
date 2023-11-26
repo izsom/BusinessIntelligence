@@ -1,3 +1,5 @@
+DROP TABLE IF EXISTS TB_Customer;
+
 -- Create TB_Customer Table
 CREATE TABLE TB_Customer (
     CustomerID INT NOT NULL,

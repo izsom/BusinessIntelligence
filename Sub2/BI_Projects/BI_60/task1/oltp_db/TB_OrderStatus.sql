@@ -1,3 +1,5 @@
+DROP TABLE IF EXISTS TB_OrderStatus;
+
 -- Create TB_OrderStatus Table
 CREATE TABLE TB_OrderStatus (
     OrderStatusID INT NOT NULL,

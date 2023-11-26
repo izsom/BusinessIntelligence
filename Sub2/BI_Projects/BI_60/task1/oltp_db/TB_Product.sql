@@ -1,3 +1,5 @@
+DROP TABLE IF EXISTS TB_Product;
+
 -- Create TB_Product Table
 CREATE TABLE TB_Product (
     ProductID INT  NOT NULL,
@@ -8,9 +10,7 @@ CREATE TABLE TB_Product (
     ProductSubCategoryID INT,
     ProductModelID INT,
     SellStartDate DATE NOT NULL,
-    SellEndDate DATE,
+    SellEndDate DATE
 );
 
 ALTER TABLE TB_Product ADD CONSTRAINT PK_Product PRIMARY KEY (ProductID);
-ALTER TABLE TB_Product ADD CONSTRAINT FK_ProductSubCategory_Product FOREIGN KEY (ProductSubCategoryID) REFERENCES TB_ProductSubCategory(ProductSubCategoryID);
-ALTER TABLE TB_Product ADD CONSTRAINT FK_ProductModel_Product FOREIGN KEY (ProductModelID) REFERENCES TB_ProductModel(ProductModelID);

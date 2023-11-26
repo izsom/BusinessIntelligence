@@ -1,8 +1,22 @@
-CREATE TABLE TB_Country (
-    CountryID INT NOT NULL,
-    Country VARCHAR(50) NOT NULL,
-    Region VARCHAR(50) NOT NULL,
-    TaxRate DECIMAL(13,4),
-    ShipCoeff DECIMAL(13,4)
+-- prevents the error
+-- Cannot drop table referenced by a foreign key constraint on table
+
+SET FOREIGN_KEY_CHECKS = 0;
+-- this is re-enabled on the last script sales order header
+
+DROP TABLE IF EXISTS TB_Country;
+
+CREATE TABLE TB_Country
+(
+	CountryID INT         NOT NULL,
+	Country   VARCHAR(50) NOT NULL,
+	Region    VARCHAR(50) NOT NULL,
+	TaxRate   DECIMAL(13, 4),
+	ShipCoeff DECIMAL(13, 4)
 );
-ALTER TABLE TB_Country ADD CONSTRAINT PK_Country PRIMARY KEY (CountryID);
+
+ALTER TABLE TB_Country
+	ADD CONSTRAINT PK_Country PRIMARY KEY (CountryID);
+
+
+SHOW FULL COLUMNS FROM TB_Country

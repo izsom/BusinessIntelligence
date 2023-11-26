@@ -7,9 +7,80 @@
   <created_user>-</created_user>
   <created_date>2023/11/26 17:07:00.185</created_date>
   <modified_user>-</modified_user>
-  <modified_date>2023/11/26 17:07:28.316</modified_date>
+  <modified_date>2023/11/26 17:17:09.034</modified_date>
   <parameters>
     </parameters>
+  <connection>
+    <name>BI_Bikes_60</name>
+    <server>localhost</server>
+    <type>MYSQL</type>
+    <access>Native</access>
+    <database>BI_Bikes_60</database>
+    <port>3306</port>
+    <username>bi2023</username>
+    <password>Encrypted 2be98afc86aa7f2e4a910fc208cc1989b</password>
+    <servername/>
+    <data_tablespace/>
+    <index_tablespace/>
+    <attributes>
+      <attribute>
+        <code>EXTRA_OPTION_MYSQL.allowLoadLocalInfile</code>
+        <attribute>true</attribute>
+      </attribute>
+      <attribute>
+        <code>EXTRA_OPTION_MYSQL.defaultFetchSize</code>
+        <attribute>500</attribute>
+      </attribute>
+      <attribute>
+        <code>EXTRA_OPTION_MYSQL.useCursorFetch</code>
+        <attribute>true</attribute>
+      </attribute>
+      <attribute>
+        <code>FORCE_IDENTIFIERS_TO_LOWERCASE</code>
+        <attribute>N</attribute>
+      </attribute>
+      <attribute>
+        <code>FORCE_IDENTIFIERS_TO_UPPERCASE</code>
+        <attribute>N</attribute>
+      </attribute>
+      <attribute>
+        <code>IS_CLUSTERED</code>
+        <attribute>N</attribute>
+      </attribute>
+      <attribute>
+        <code>PORT_NUMBER</code>
+        <attribute>3306</attribute>
+      </attribute>
+      <attribute>
+        <code>PRESERVE_RESERVED_WORD_CASE</code>
+        <attribute>Y</attribute>
+      </attribute>
+      <attribute>
+        <code>QUOTE_ALL_FIELDS</code>
+        <attribute>N</attribute>
+      </attribute>
+      <attribute>
+        <code>SQL_CONNECT</code>
+        <attribute>SET GLOBAL local_infile = 'ON';</attribute>
+      </attribute>
+      <attribute>
+        <code>STREAM_RESULTS</code>
+        <attribute>Y</attribute>
+      </attribute>
+      <attribute>
+        <code>SUPPORTS_BOOLEAN_DATA_TYPE</code>
+        <attribute>Y</attribute>
+      </attribute>
+      <attribute>
+        <code>SUPPORTS_TIMESTAMP_DATA_TYPE</code>
+        <attribute>Y</attribute>
+      </attribute>
+      <attribute>
+        <code>USE_POOLING</code>
+        <attribute>N</attribute>
+      </attribute>
+    </attributes>
+  </connection>
   <slaveservers>
     </slaveservers>
   <job-log-table>
@@ -285,8 +356,66 @@
   <pass_batchid>N</pass_batchid>
   <shared_objects_file/>
   <entries>
+    <entry>
+      <name>1.4 Bulk load into MySQL</name>
+      <description/>
+      <type>MYSQL_BULK_LOAD</type>
+      <attributes/>
+      <schemaname/>
+      <tablename/>
+      <filename/>
+      <separator/>
+      <enclosed/>
+      <escaped/>
+      <linestarted/>
+      <lineterminated/>
+      <replacedata>Y</replacedata>
+      <ignorelines>0</ignorelines>
+      <listattribut/>
+      <localinfile>Y</localinfile>
+      <prorityvalue>0</prorityvalue>
+      <addfiletoresult>N</addfiletoresult>
+      <connection>BI_Bikes_60</connection>
+      <parallel>N</parallel>
+      <draw>Y</draw>
+      <nr>0</nr>
+      <xloc>192</xloc>
+      <yloc>32</yloc>
+      <attributes_kjc/>
+    </entry>
+    <entry>
+      <name>Start</name>
+      <description/>
+      <type>SPECIAL</type>
+      <attributes/>
+      <start>Y</start>
+      <dummy>N</dummy>
+      <repeat>N</repeat>
+      <schedulerType>0</schedulerType>
+      <intervalSeconds>0</intervalSeconds>
+      <intervalMinutes>60</intervalMinutes>
+      <hour>12</hour>
+      <minutes>0</minutes>
+      <weekDay>1</weekDay>
+      <DayOfMonth>1</DayOfMonth>
+      <parallel>N</parallel>
+      <draw>Y</draw>
+      <nr>0</nr>
+      <xloc>32</xloc>
+      <yloc>32</yloc>
+      <attributes_kjc/>
+    </entry>
   </entries>
   <hops>
+    <hop>
+      <from>Start</from>
+      <to>1.4 Bulk load into MySQL</to>
+      <from_nr>0</from_nr>
+      <to_nr>0</to_nr>
+      <enabled>Y</enabled>
+      <evaluation>Y</evaluation>
+      <unconditional>Y</unconditional>
+    </hop>
   </hops>
   <notepads>
   </notepads>

@@ -6,4 +6,3 @@ CREATE TABLE TB_ProductModel (
     ProductModelName VARCHAR(50) NOT NULL
 );
 ALTER TABLE TB_ProductModel ADD CONSTRAINT PK_ProductModel PRIMARY KEY (ProductModelID);
-ALTER TABLE TB_Product ADD CONSTRAINT FK_ProductModel_Product FOREIGN KEY (ProductModelID) REFERENCES TB_ProductModel(ProductModelID);

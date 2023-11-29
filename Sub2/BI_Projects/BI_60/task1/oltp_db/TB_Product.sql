@@ -14,3 +14,8 @@ CREATE TABLE TB_Product (
 );
 
 ALTER TABLE TB_Product ADD CONSTRAINT PK_Product PRIMARY KEY (ProductID);
+ALTER TABLE TB_Product ADD CONSTRAINT FK_ProductModel_Product FOREIGN KEY (ProductModelID) REFERENCES TB_ProductModel(ProductModelID);
+ALTER TABLE TB_Product
+	ADD CONSTRAINT FK_ProductSubCategory_Product
+	FOREIGN KEY (ProductSubCategoryID)
+	REFERENCES TB_ProductSubCategory (ProductSubCategoryID);

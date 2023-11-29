@@ -9,8 +9,3 @@ CREATE TABLE TB_ProductTopCategory
 );
 ALTER TABLE TB_ProductTopCategory
 	ADD CONSTRAINT PK_ProductTopCategory PRIMARY KEY (ProductTopCategoryID);
-
-ALTER TABLE TB_ProductSubCategory
-	ADD CONSTRAINT FK_ProductTopCategory_ProductSubCategory
-	FOREIGN KEY (ProductTopCategoryID)
-	REFERENCES TB_ProductTopCategory (ProductTopCategoryID);

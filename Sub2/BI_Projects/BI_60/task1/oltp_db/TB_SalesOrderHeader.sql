@@ -29,5 +29,3 @@ ALTER TABLE TB_SalesOrderHeader
 	ADD CONSTRAINT FK_ShipToAddress_SalesOrderHeader FOREIGN KEY (ShipToAddressID) REFERENCES TB_Address (AddressID);
 ALTER TABLE TB_SalesOrderHeader
 	ADD CONSTRAINT FK_ShipMethod_SalesOrderHeader FOREIGN KEY (ShipMethodID) REFERENCES TB_ShipMethod (ShipMethodID);
-ALTER TABLE TB_SalesOrderDetail
-	ADD CONSTRAINT FK_SalesOrder_SalesOrderDetail FOREIGN KEY (SalesOrderID) REFERENCES TB_SalesOrderHeader (SalesOrderID);

@@ -14,3 +14,5 @@ ALTER TABLE TB_SalesOrderDetail
 	ADD CONSTRAINT PK_SalesOrderDetail PRIMARY KEY (SalesOrderDetailID);
 ALTER TABLE TB_SalesOrderDetail
 	ADD CONSTRAINT FK_Product_SalesOrderDetail FOREIGN KEY (ProductID) REFERENCES TB_Product (ProductID);
+ALTER TABLE TB_SalesOrderDetail
+	ADD CONSTRAINT FK_SalesOrder_SalesOrderDetail FOREIGN KEY (SalesOrderID) REFERENCES TB_SalesOrderHeader (SalesOrderID);

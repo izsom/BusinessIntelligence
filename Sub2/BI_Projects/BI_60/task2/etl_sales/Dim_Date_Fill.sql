@@ -15,9 +15,9 @@ SELECT
 FROM
     (
 	select distinct * from (
-    SELECT OrderDate AS DateIn FROM BI_Bikes_39.TB_SalesOrderHeader
+    SELECT OrderDate AS DateIn FROM TB_SalesOrderHeader
     UNION
-    SELECT DueDate AS DateIn FROM BI_Bikes_39.TB_SalesOrderHeader
+    SELECT DueDate AS DateIn FROM TB_SalesOrderHeader
     UNION
-    SELECT ShipDate AS DateIn FROM BI_Bikes_39.TB_SalesOrderHeader WHERE ShipDate IS NOT NULL) as myDataSelect
+    SELECT ShipDate AS DateIn FROM TB_SalesOrderHeader WHERE ShipDate IS NOT NULL) as myDataSelect
 ) AS dates

@@ -14,7 +14,7 @@ INSERT INTO Dim_Product (
 SELECT
     p.ProductID AS ProductKey,
     p.ProductName as ProductName,
-    pm.ProductModelName as,
+    pm.ProductModelName as ProductModelName,
     psc.Name AS ProductSubCategoryName,
     ptc.Name AS ProductTopCategoryName,
     p.StandardCost as StandardCost,
@@ -27,7 +27,7 @@ FROM
     TB_Product p
 JOIN
     TB_ProductModel pm ON p.ProductModelID = pm.ProductModelID
-LEFT JOIN
+JOIN
     TB_ProductSubCategory psc ON p.ProductSubCategoryID = psc.ProductSubCategoryID
-LEFT JOIN
+JOIN
     TB_ProductTopCategory ptc ON psc.ProductTopCategoryID = ptc.ProductTopCategoryID;

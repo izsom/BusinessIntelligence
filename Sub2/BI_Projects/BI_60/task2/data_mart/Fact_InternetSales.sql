@@ -1,7 +1,7 @@
 -- Create Fact_InternetSales Table
 CREATE TABLE Fact_InternetSales
 (
-	SalesOrderLineNumber  VARCHAR(50) PRIMARY KEY NOT NULL,
+	SalesOrderLineNumber  VARCHAR(50) NOT NULL,
 	SalesOrderNumber      VARCHAR(30)             NOT NULL,
 	OrderDateKey          INT                     NOT NULL,
 	OrderDate             DATE                    NOT NULL,
@@ -21,12 +21,10 @@ CREATE TABLE Fact_InternetSales
 	OrderLineTaxAmt       DECIMAL(13, 4)          NOT NULL,
 	OrderLineShippingCost DECIMAL(13, 4)          NOT NULL
 );
-
-ALTER TABLE Fact_InternetSales
-	ADD CONSTRAINT FK_Customer_FactInternetSales
-	FOREIGN KEY (CustomerKey)
-	REFERENCES Dim_Customer (CustomerKey);
-ALTER TABLE Fact_InternetSales
-	ADD CONSTRAINT FK_ShipToLocation_FactInternetSales
-	FOREIGN KEY (ShipToLocationKey)
-	REFERENCES Dim_Location (LocationKey);
+Alter table Fact_InternetSales	ADD CONSTRAINT PK_FactInternetSales	PRIMARY KEY (SalesOrderLineNumber);
+ALTER TABLE Fact_InternetSales ADD CONSTRAINT FK_Customer_FactInternetSales	FOREIGN KEY (CustomerKey) REFERENCES Dim_Customer (CustomerKey);
+ALTER TABLE Fact_InternetSales ADD CONSTRAINT FK_ShipToLocation_FactInternetSales FOREIGN KEY (ShipToLocationKey) REFERENCES Dim_Location (LocationKey);
+ALTER TABLE Fact_InternetSales ADD CONSTRAINT FK_OrderDate_FactInternetSales FOREIGN KEY (OrderDateKey) REFERENCES Dim_Date(DateKey);
+ALTER TABLE Fact_InternetSales ADD CONSTRAINT FK_DueDate_FactInternetSales FOREIGN KEY (DueDateKey) REFERENCES Dim_Date(DateKey);
+ALTER TABLE Fact_InternetSales ADD CONSTRAINT FK_ShipDate_FactInternetSales FOREIGN KEY (ShipDateKey) REFERENCES Dim_Date(DateKey);
+ALTER TABLE Fact_InternetSales ADD CONSTRAINT FK_Product_FactInternetSales FOREIGN KEY (ProductKey) REFERENCES Dim_Product(ProductKey);

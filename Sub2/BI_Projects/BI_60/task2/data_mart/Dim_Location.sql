@@ -1,6 +1,6 @@
 -- Create Dim_Location Table
 CREATE TABLE Dim_Location (
-    LocationKey INT PRIMARY KEY NOT NULL,
+    LocationKey INT NOT NULL,
     Country VARCHAR(50) NOT NULL,
     Region VARCHAR(50) NOT NULL,
     TaxRate DECIMAL(13,4),

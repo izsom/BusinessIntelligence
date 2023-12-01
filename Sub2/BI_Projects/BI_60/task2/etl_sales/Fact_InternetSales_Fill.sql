@@ -21,10 +21,10 @@ INSERT INTO Fact_InternetSales (
     OrderLineShippingCost
 )
 SELECT
-    'SOL' + CAST(soh.SalesOrderID AS VARCHAR(20)) + '-' + CAST(sod.SalesOrderDetailID AS VARCHAR(20)) AS SalesOrderLineNumber,
-    soh.SalesOrderNumber,
+    CONCAT('SOL',soh.SalesOrderID, '-',sod.SalesOrderDetailID) AS SalesOrderLineNumber,
+    soh.SalesOrderNumber as SalesOrderNumber,
     10000 * YEAR(soh.OrderDate) + 100 * MONTH(soh.OrderDate) + DAY(soh.OrderDate) AS OrderDateKey,
-    soh.OrderDate,
+    soh.OrderDate as OrderDate,
     10000 * YEAR(soh.DueDate) + 100 * MONTH(soh.DueDate) + DAY(soh.DueDate) AS DueDateKey,
     soh.DueDate,
     CASE WHEN soh.ShipDate IS NOT NULL THEN 10000 * YEAR(soh.ShipDate) + 100 * MONTH(soh.ShipDate) + DAY(soh.ShipDate) END AS ShipDateKey,

@@ -1,6 +1,6 @@
 -- Create Dim_Product Table
 CREATE TABLE Dim_Product (
-    ProductKey INT PRIMARY KEY NOT NULL,
+    ProductKey INT NOT NULL,
     ProductName VARCHAR(50) NOT NULL,
     ProductModelName VARCHAR(50) NOT NULL,
     ProductSubCategoryName VARCHAR(50) NOT NULL,
@@ -12,3 +12,4 @@ CREATE TABLE Dim_Product (
     ProductStatus VARCHAR(50) NOT NULL
 );
 
+Alter table Dim_Product	ADD CONSTRAINT PK_Dim_Product PRIMARY KEY (ProductKey);

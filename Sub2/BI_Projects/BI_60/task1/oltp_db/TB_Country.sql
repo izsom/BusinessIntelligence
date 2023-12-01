@@ -1,9 +1,4 @@
--- prevents the error
--- Cannot drop table referenced by a foreign key constraint on table
-
--- SET FOREIGN_KEY_CHECKS = 0;
--- this is re-enabled on the last script sales order header
-
+-- To be able to rerun the '1 - Create Bikes' job, the existing tables needs to be dropped first.
 
 DROP TABLE IF EXISTS TB_SalesOrderDetail; 
 DROP TABLE IF EXISTS TB_SalesOrderHeader;

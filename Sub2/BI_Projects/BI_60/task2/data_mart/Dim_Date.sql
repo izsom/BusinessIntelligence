@@ -1,6 +1,6 @@
 -- Create Dim_Date Table
 CREATE TABLE Dim_Date (
-    DateKey INT PRIMARY KEY NOT NULL,
+    DateKey INT NOT NULL,
     FullDateAlternateKey DATE NOT NULL,
     DayNumberOfWeek INT NOT NULL,
     EnglishDayNameOfWeek VARCHAR(20) NOT NULL,
@@ -13,3 +13,4 @@ CREATE TABLE Dim_Date (
     CalendarYear INT NOT NULL
 );
 
+ALTER TABLE Dim_Date ADD CONSTRAINT PK_Dim_Date PRIMARY KEY (DateKey);

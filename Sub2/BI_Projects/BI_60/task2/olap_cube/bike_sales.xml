@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <Schema name="bike_sales">
   <Dimension type="TimeDimension" visible="true" highCardinality="false" name="Date">
     <Hierarchy name="Days" visible="true" hasAll="true" primaryKey="DateKey">
@@ -73,4 +74,7 @@
     <Measure name="ShippingCost" column="OrderLineShippingCost" formatString="Currency" aggregator="sum" visible="true">
     </Measure>
   </Cube>
+=======
+<Schema name="New Schema1">
+>>>>>>> 0c9b7adee7dd81c2a267bc23f67ea93e1d79977a
 </Schema>

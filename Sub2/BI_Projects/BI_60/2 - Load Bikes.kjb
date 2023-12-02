@@ -8,7 +8,7 @@
   <created_user>-</created_user>
   <created_date>2023/11/26 17:07:00.185</created_date>
   <modified_user>-</modified_user>
-  <modified_date>2023/12/02 15:49:50.985</modified_date>
+  <modified_date>2023/12/02 15:56:20.631</modified_date>
   <parameters>
     <parameter>
       <name>MyPath_Zsombor</name>
@@ -511,7 +511,7 @@
       <linestarted/>
       <lineterminated/>
       <replacedata>Y</replacedata>
-      <ignorelines>1</ignorelines>
+      <ignorelines>0</ignorelines>
       <listattribut/>
       <localinfile>Y</localinfile>
       <prorityvalue>0</prorityvalue>

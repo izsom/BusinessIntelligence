@@ -8,12 +8,17 @@
   <created_user>-</created_user>
   <created_date>2023/11/26 17:07:00.185</created_date>
   <modified_user>-</modified_user>
-  <modified_date>2023/11/29 13:44:29.332</modified_date>
+  <modified_date>2023/12/02 15:49:50.985</modified_date>
   <parameters>
     <parameter>
       <name>MyPath_Zsombor</name>
-      <default_value>C:\Users\zsomb\OneDrive - TU Wien\egyetem\TU WIEN\DataScience\BusinessIntelligence\BI_Assingment\Sub2</default_value>
+      <default_value>C:\Users\me\Documents\aall my actual stuff\tuw\23W_BI_ass2\23w-bi-a2-git\Sub2</default_value>
       <description>Path to BI_Projects folder for Zsombor</description>
+    </parameter>
+    <parameter>
+      <name>other_path</name>
+      <default_value>C:\Users\zsomb\OneDrive - TU Wien\egyetem\TU WIEN\DataScience\BusinessIntelligence\BI_Assingment\Sub2</default_value>
+      <description/>
     </parameter>
   </parameters>
   <connection>
@@ -506,7 +511,7 @@
       <linestarted/>
       <lineterminated/>
       <replacedata>Y</replacedata>
-      <ignorelines>0</ignorelines>
+      <ignorelines>1</ignorelines>
       <listattribut/>
       <localinfile>Y</localinfile>
       <prorityvalue>0</prorityvalue>

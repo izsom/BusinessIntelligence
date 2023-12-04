@@ -8,12 +8,17 @@
   <created_user>-</created_user>
   <created_date>2023/11/30 19:10:00.778</created_date>
   <modified_user>-</modified_user>
-  <modified_date>2023/12/01 18:09:55.351</modified_date>
+  <modified_date>2023/12/04 17:38:29.386</modified_date>
   <parameters>
     <parameter>
       <name>MyPath</name>
-      <default_value>C:\Users\zsomb\OneDrive - TU Wien\egyetem\TU WIEN\DataScience\BusinessIntelligence\BI_Assingment\Sub2</default_value>
+      <default_value>C:\Users\me\Documents\aall my actual stuff\tuw\23W_BI_ass2\23w-bi-a2-git\Sub2</default_value>
       <description>Path to the BI_Project order</description>
+    </parameter>
+    <parameter>
+      <name>other_path</name>
+      <default_value>C:\Users\zsomb\OneDrive - TU Wien\egyetem\TU WIEN\DataScience\BusinessIntelligence\BI_Assingment\Sub2</default_value>
+      <description/>
     </parameter>
   </parameters>
   <connection>

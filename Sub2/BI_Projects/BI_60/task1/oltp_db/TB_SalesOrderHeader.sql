@@ -1,5 +1,5 @@
 DROP TABLE IF EXISTS TB_SalesOrderHeader;
-SET FOREIGN_KEY_CHECKS = 0;
+-- SET FOREIGN_KEY_CHECKS = 0;
 -- from country sql
 
 -- Create TB_SalesOrderHeader Table

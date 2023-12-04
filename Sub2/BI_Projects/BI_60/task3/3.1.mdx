@@ -1,0 +1,14 @@
+SELECT
+	{[Profit]} ON COLUMNS,
+	Order(
+		TopCount(
+			[Product].[ProductCategory],
+			[Measures].[Profit]
+		),
+		[Measures].[Profit],
+		DESC
+	) ON ROWS
+FROM
+	[bike_sales]
+WHERE
+	[Date].[Year].&[2021]

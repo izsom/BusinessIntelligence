@@ -1,8 +1,8 @@
 SELECT
-	{[Profit]} ON COLUMNS,
+	{[Measures].[Profit]} ON COLUMNS,
 	Order(
 		TopCount(
-			[Product].[ProductCategory],
+			[Product.ProductCategory].[All Product.ProductCategorys].Children,
 			[Measures].[Profit]
 		),
 		[Measures].[Profit],
@@ -11,4 +11,4 @@ SELECT
 FROM
 	[bike_sales]
 WHERE
-	[Date].[Year].&[2021]
+	[OrderDate].[Year].&[2021]

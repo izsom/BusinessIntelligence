@@ -18,10 +18,10 @@
 		<Hierarchy name="Territory" visible="true" hasAll="true" primaryKey="LocationKey">
 			<Table name="Dim_Location">
 			</Table>
-			<Level name="Region" visible="true" table="Dim_Location" column="Region" type="String" uniqueMembers="false"
+			<Level name="Country" visible="true" table="Dim_Location" column="Country" type="String" uniqueMembers="false"
 			       levelType="Regular" hideMemberIf="Never">
 			</Level>
-			<Level name="Country" visible="true" table="Dim_Location" column="Country" type="String" uniqueMembers="false"
+			<Level name="Region" visible="true" table="Dim_Location" column="Region" type="String" uniqueMembers="false"
 			       levelType="Regular" hideMemberIf="Never">
 			</Level>
 		</Hierarchy>

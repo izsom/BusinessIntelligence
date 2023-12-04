@@ -1,0 +1,16 @@
+-- 3.2 Sales – revenue for countries
+-- What is the total revenue for each country in the year 2019 sorted by revenue in descending order?
+-- Use ShipToLocation, OrderDate and OrderLineTotal
+
+SELECT
+	{[Measures].[Revenue]} ON COLUMNS,
+	Order(
+		[ShippedTo.Territory].[Country].Members,
+		[Measures].[Revenue],
+		DESC
+	) ON ROWS
+FROM
+	[bike_sales]
+WHERE
+	[OrderDate].[Year].&[2019]
+

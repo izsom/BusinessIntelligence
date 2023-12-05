@@ -19,11 +19,13 @@ INSERT INTO Dim_Product (
 	p.StandardCost      AS StandardCost,
 	p.ListPrice         AS ListPrice,
 	p.SellStartDate     AS StartDate,
-	-- p.SellEndDate       AS EndDate,
-	IF(STRCMP(p.SellEndDate, '0000-00-00'), NULL, p.SellEndDate)
-		AS EndDate,
-	IF(p.SellEndDate IS NULL OR p.SellEndDate > '2021-09-30', 'Current', 'Discontinued')
-		AS ProductStatus
+	p.SellEndDate       AS EndDate,
+	CASE WHEN p.SellEndDate IS NULL OR p.SellEndDate > '2021-09-30' THEN 'Current' ELSE 'Discontinued' END AS ProductStatus
+
+	--IF(STRCMP(p.SellEndDate, '0000-00-00'), NULL, p.SellEndDate)
+	--	AS EndDate,
+	--IF(p.SellEndDate IS NULL OR p.SellEndDate > '2021-09-30', 'Current', 'Discontinued')
+	--	AS ProductStatus
 
 FROM TB_Product p
 	JOIN

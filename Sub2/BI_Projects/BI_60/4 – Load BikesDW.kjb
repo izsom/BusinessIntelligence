@@ -1,5 +1,5 @@
 <job>
-  <name>Insert Data into BikesDW</name>
+  <name>4 – Load BikesDW</name>
   <description/>
   <extended_description/>
   <job_version/>
@@ -8,16 +8,16 @@
   <created_user>-</created_user>
   <created_date>2023/12/01 19:35:36.370</created_date>
   <modified_user>-</modified_user>
-  <modified_date>2023/12/04 17:49:32.080</modified_date>
+  <modified_date>2023/12/05 11:31:00.996</modified_date>
   <parameters>
     <parameter>
       <name>MyPath</name>
-      <default_value>C:\Users\me\Documents\aall my actual stuff\tuw\23W_BI_ass2\23w-bi-a2-git\Sub2</default_value>
+      <default_value>C:\Users\zsomb\OneDrive - TU Wien\egyetem\TU WIEN\DataScience\BusinessIntelligence\BI_Assingment\Sub2</default_value>
       <description>Path to BI_Projects</description>
     </parameter>
     <parameter>
       <name>other_path</name>
-      <default_value>C:\Users\zsomb\OneDrive - TU Wien\egyetem\TU WIEN\DataScience\BusinessIntelligence\BI_Assingment\Sub2</default_value>
+      <default_value>C:\Users\me\Documents\aall my actual stuff\tuw\23W_BI_ass2\23w-bi-a2-git\Sub2</default_value>
       <description/>
     </parameter>
   </parameters>

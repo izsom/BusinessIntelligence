@@ -1,13 +1,19 @@
+-- 3.3 Sales – most profitable customers in the time period
+-- What are the top 10 most profitable customers in the first six months of the year 2021 (January through June) sorted by profit in descending order?
+-- Use OrderDate, and OrderLineProfit.
+
 SELECT
-  {[Measures].[Profit]} ON COLUMNS,
-  TOPCOUNT(
-	[Customer.FullName].Members, 10,
-	[Measures].[Profit]
-	
+	{[Measures].[Profit]} ON COLUMNS,
+	Tail(
+		-- top count returns a sum of all customers along with all customers
+		-- so it will be removed in tail function
+		TOPCOUNT(
+			[Customer.FullName].Members, 11,
+			[Measures].[Profit]
+		),
+		10
 	) ON ROWS
 FROM [bike_sales]
 WHERE Except(
-  [OrderDate].[Year].&[2021],[OrderDate].[Month].&[1] : [OrderDate].[Month].&[6]
+	[OrderDate].[Year].&[2021], [OrderDate].[Month].&[1] : [OrderDate].[Month].&[6]
 )
-
-

@@ -1,0 +1,13 @@
+SELECT
+  {[Measures].[Profit]} ON COLUMNS,
+  TOPCOUNT(
+	[Customer.FullName].Members, 10,
+	[Measures].[Profit]
+	
+	) ON ROWS
+FROM [bike_sales]
+WHERE Except(
+  [OrderDate].[Year].&[2021],[OrderDate].[Month].&[1] : [OrderDate].[Month].&[6]
+)
+
+

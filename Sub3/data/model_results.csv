@@ -1,0 +1,5 @@
+,R2,Parameter alpha,Parameter l1_ratio
+Ridge Regression,0.7423943507430288,70.0,
+Lasso Regression,0.7412363817969423,55.0,
+ElasticNet using Grid search,0.7241882650633162,0.2,0.30000000000000004
+ElasticNet using Randomized search,0.667084179602653,1.6,0.7000000000000001

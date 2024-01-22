@@ -1,0 +1,28 @@
+CREATE TABLE BI_BikesDW_39.Fact_InternetSales(
+    SalesOrderLineNumber VARCHAR(50),
+    SalesOrderNumber VARCHAR(30),
+    OrderDateKey INT,
+	OrderDate DATE,
+    DueDateKey INT,
+	DueDate DATE,
+    ShipDateKey INT,
+	ShipDate DATE,
+    ProductKey INT,
+    CustomerKey INT,
+    ShipToLocationKey INT,
+    OrderStatus VARCHAR(50),
+    ShipMethod VARCHAR(50),
+    OrderQty INT,
+    UnitPrice DECIMAL(13,4),
+    OrderLineTotal DECIMAL(13,4),
+    OrderLineProfit DECIMAL(13,4),
+    OrderLineTaxAmt DECIMAL(13,4),
+    OrderLineShippingCost DECIMAL(13,4),
+	CONSTRAINT PK_FactInternetSales PRIMARY KEY (SalesOrderLineNumber), -- primary key
+	CONSTRAINT FK_OrderDate_DimDate FOREIGN KEY (OrderDateKey) REFERENCES Dim_Date(DateKey),
+    CONSTRAINT FK_DueDate_DimDate FOREIGN KEY (DueDateKey) REFERENCES Dim_Date(DateKey),
+    CONSTRAINT FK_ShipDate_DimDate FOREIGN KEY (ShipDateKey) REFERENCES Dim_Date(DateKey),
+    CONSTRAINT FK_Product_DimProduct FOREIGN KEY (ProductKey) REFERENCES Dim_Product(ProductKey),
+    CONSTRAINT FK_Customer_DimCustomer FOREIGN KEY (CustomerKey) REFERENCES Dim_Customer(CustomerKey),
+    CONSTRAINT FK_ShipToLocation_DimLocation FOREIGN KEY (ShipToLocationKey) REFERENCES Dim_Location(LocationKey)
+);
